@@ -9,16 +9,15 @@ public class TasKagitMakas {
         String[] moves = {"taş", "kağıt", "makas"};
 
         System.out.println("Taş kağıt makas oyununa hoş geldiniz!");
-        System.out.print("Lütfen adınızı girin: ");
-        String playerName = scanner.nextLine();
 
         int playerScore = 0;
         int computerScore = 0;
 
         while (true) {
-            System.out.println("\n" + playerName + "'in Skoru: " + playerScore);
+            System.out.println("\nSizin Skorunuz: " + playerScore);
             System.out.println("Bilgisayarın Skoru: " + computerScore);
 
+            // Kullanıcının hamlesinin klavyeden alınması
             System.out.print("Lütfen hamlenizi seçin (taş, kağıt, makas - çıkmak için q): ");
             String playerMove = scanner.nextLine().toLowerCase();
 
@@ -32,6 +31,7 @@ public class TasKagitMakas {
                 continue;
             }
 
+            // Bilgisayarın rastgele hamle yapması
             int computerIndex = random.nextInt(3);
             String computerMove = moves[computerIndex];
 
@@ -52,7 +52,7 @@ public class TasKagitMakas {
 
         System.out.println("\nOyun sona erdi!");
         System.out.println("Sonuçlar:");
-        System.out.println(playerName + "'in Skoru: " + playerScore);
+        System.out.println("Sizin Skorunuz: " + playerScore);
         System.out.println("Bilgisayarın Skoru: " + computerScore);
 
         scanner.close();
